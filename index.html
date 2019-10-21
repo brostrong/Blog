@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>今天吃什么？</title>
+		<script type="text/javascript">
+		function start(){
+				var select =  new Array("羊肉粉",	//0	
+										"米皮",		//1	
+										"炒饭",		//2	
+										"快餐",		//3	
+										"炒菜",		//4	
+										"酸辣粉/重庆小面",//5 
+										"黄焖鸡",	//6一个月吃一次，概率为 1/30
+										"去外面吃",	//7一个月吃一次，概率为 1/30
+										"鸡公煲",	//8两个星期吃一次，概率为 1/14
+										"牛牛盖饭"	//9	概率为 1/价格 == 1/11
+				);
+				var a;
+				if(Math.round(Math.random()*900)==1){
+					if(Math.round()>0.5){
+						a = 6;
+					}else{
+						a = 7;
+					}
+				}else if(Math.round(Math.random()*14)==1){
+					a = 8;
+				}else if(Math.round(Math.random()*11)==1){
+					a = 9;
+				}else{
+					a=Math.round(Math.random()*4);	
+				}
+				document.getElementById("t1").innerHTML=select[a];
+				id=window.setTimeout("start()",75);
+				document.getElementById("start").disabled="disabled";
+				document.getElementById("stop").disabled="";
+			}
+			function stop(){
+			
+				window.clearTimeout(id);
+
+				document.getElementById("stop").disabled="disabled";
+				document.getElementById("start").disabled="";
+			}
+		</script>
+		<style type="text/css">
+			th {
+				
+				font-size:150px;
+				font-style: normal;
+				line-height: normal;
+				font-weight: bold;
+				font-variant: normal;
+			}
+			table{
+				margin-top:200px;
+				margin-bottom:200px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="start" onclick="start()" style="width:80px;height:40px;">Start</button>
+		<button id="stop" onclick="stop()" style="width:80px;height:40px;" disabled="disabled">Stop</button>
+		<table border="0" align="center">
+			<tr>
+				<th id="t1">
+					今天吃什么？
+				</th>
+			</tr>
+		</table>
+	</body>
+</html>
