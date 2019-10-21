@@ -43,6 +43,21 @@
 			}
 		</script>
 		<style type="text/css">
+			h1 {
+			    background: linear-gradient(to right, #ff7907, blue);
+			    -webkit-background-clip: text;
+			    color: transparent;
+			}
+			hr {
+			    position: relative;
+			    display: block;
+			    margin: 0 auto;
+			    height: 6px;
+			    width: 100%;
+			    background-image: -webkit-linear-gradient(left , #730cc9, #ff6ed7);
+			    background-image: -o-linear-gradient(left , #730cc9, #ff6ed7);
+			    background-image: linear-gradient(left , #730cc9, #ff6ed7);
+			}
 			th {
 				
 				font-size:150px;
@@ -58,6 +73,9 @@
 		</style>
 	</head>
 	<body>
+		<h1>Brostrong's blog</h1>
+		<p></p>
+		<hr>
 		<button id="start" onclick="start()" style="width:80px;height:40px;">Start</button>
 		<button id="stop" onclick="stop()" style="width:80px;height:40px;" disabled="disabled">Stop</button>
 		<table border="0" align="center">
