@@ -1,2 +1,2 @@
-# Blog
+# blog
 brostrong.cn
